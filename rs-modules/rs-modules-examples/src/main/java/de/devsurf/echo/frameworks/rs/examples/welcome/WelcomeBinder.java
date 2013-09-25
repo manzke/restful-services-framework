@@ -2,9 +2,9 @@ package de.devsurf.echo.frameworks.rs.examples.welcome;
 
 import javax.inject.Inject;
 
-import com.saperion.frameworks.rs.api.InstallableModule;
-import com.saperion.frameworks.rs.system.api.Framework;
-import com.saperion.frameworks.rs.system.api.ResourceBinder;
+import de.devsurf.echo.frameworks.rs.api.InstallableModule;
+import de.devsurf.echo.frameworks.rs.system.api.Framework;
+import de.devsurf.echo.frameworks.rs.system.api.ResourceBinder;
 
 public class WelcomeBinder implements InstallableModule {
 	@Inject

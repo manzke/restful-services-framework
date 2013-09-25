@@ -8,9 +8,9 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.saperion.frameworks.rs.api.Publishable.AbstractEndpoint;
-import com.saperion.frameworks.rs.api.User;
-import com.saperion.frameworks.rs.system.api.CapabilitiesManager;
+import de.devsurf.echo.frameworks.rs.api.Publishable.AbstractEndpoint;
+import de.devsurf.echo.frameworks.rs.api.User;
+import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager;
 
 @Path("welcome")
 public class WelcomeEndpoint extends AbstractEndpoint {
