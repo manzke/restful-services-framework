@@ -5,6 +5,7 @@
 		<groupId>com.saperion.frameworks.rs</groupId>
 		<artifactId>rs-modules</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>rs-modules-examples</artifactId>
 
