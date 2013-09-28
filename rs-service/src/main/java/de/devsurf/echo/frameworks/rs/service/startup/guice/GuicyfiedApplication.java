@@ -22,7 +22,7 @@ import de.devsurf.echo.frameworks.rs.service.startup.Configuration;
 public class GuicyfiedApplication extends Application {
 	@Inject
 	public GuicyfiedApplication(ServiceLocator serviceLocator) {
-		super(serviceLocator);
+		super();
 		Injector startupInjector = Guice.createInjector(new Configuration(),
 				new GuicyfiedSystem());
 
