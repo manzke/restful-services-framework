@@ -5,6 +5,8 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.process.internal.RequestScoped;
 import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.server.spi.Container;
+import org.glassfish.jersey.server.spi.ContainerLifecycleListener;
 
 import de.devsurf.echo.frameworks.rs.api.InjectableContext;
 import de.devsurf.echo.frameworks.rs.service.resources.ServerEndpoint;
@@ -23,5 +25,27 @@ public abstract class Application extends ResourceConfig {
 						.in(RequestScoped.class);
 			}
 		});
+		registerInstances(new ApplicationLifecycle());
+	}
+
+	public void shutdown() {
+	}
+
+	public class ApplicationLifecycle implements ContainerLifecycleListener {
+
+		@Override
+		public void onStartup(Container container) {
+
+		}
+
+		@Override
+		public void onReload(Container container) {
+
+		}
+
+		@Override
+		public void onShutdown(Container container) {
+			Application.this.shutdown();
+		}
 	}
 }

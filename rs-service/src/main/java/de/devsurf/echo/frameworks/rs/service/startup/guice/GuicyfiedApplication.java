@@ -20,6 +20,8 @@ import de.devsurf.echo.frameworks.rs.service.startup.Configuration;
 
 @ApplicationPath("/")
 public class GuicyfiedApplication extends Application {
+	protected Injector injector;
+	
 	@Inject
 	public GuicyfiedApplication(ServiceLocator serviceLocator) {
 		super();
@@ -38,5 +40,7 @@ public class GuicyfiedApplication extends Application {
 		GuiceIntoHK2Bridge guiceBridge = serviceLocator
 				.getService(GuiceIntoHK2Bridge.class);
 		guiceBridge.bridgeGuiceInjector(runtimeInjector);
+		
+		injector = runtimeInjector;
 	}
 }
