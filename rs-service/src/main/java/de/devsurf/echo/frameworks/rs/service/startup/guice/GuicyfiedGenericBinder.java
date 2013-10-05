@@ -44,6 +44,7 @@ public class GuicyfiedGenericBinder implements GenericBinder {
 	public static class GuicyfiedBinder<Type> extends AbstractModule implements
 			AnnotatedBinder<Type>, TypedBinder<Type>, ScopedBinder {
 		private Logger logger;
+		private Type implementation;
 		private Class<Type> interfaceClass;
 		private Class<? extends Type> implementationClass;
 		private Class<? extends Provider<? extends Type>> providerClass;
@@ -101,6 +102,12 @@ public class GuicyfiedGenericBinder implements GenericBinder {
 		}
 
 		@Override
+		public ScopedBinder to(Type implementation) {
+			this.implementation = implementation;
+			return this;
+		}
+
+		@Override
 		public Installable asSingleton() {
 			singleton = true;
 			return this;
@@ -134,7 +141,10 @@ public class GuicyfiedGenericBinder implements GenericBinder {
 				linked = builder.annotatedWith(annotationClass);
 			}
 
-			if (implementationClass != null) {
+			if (implementation != null) {
+				(linked != null ? linked : builder)
+						.toInstance(implementation);
+			} else if (implementationClass != null) {
 				scoped = (linked != null ? linked : builder)
 						.to(implementationClass);
 			} else if (constructor != null) {

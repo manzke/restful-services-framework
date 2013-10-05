@@ -93,7 +93,7 @@ public class Configuration implements Module {
 	}
 
 	public static class Namespace {
-		private static final String DEFAULT_NAMESPACE = "nois";
+		private static final String DEFAULT_NAMESPACE = "service";
 
 		private final String name;
 

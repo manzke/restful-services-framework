@@ -10,6 +10,8 @@ import javax.inject.Provider;
 public interface TypedBinder<Type> extends ScopedBinder {
 	ScopedBinder to(Class<? extends Type> implementationClass);
 	
+	ScopedBinder to(Type implementation);
+	
 	ScopedBinder toConstructor(Constructor<? extends Type> constructor);
 	
 	ScopedBinder toProvider(Class<? extends Provider<? extends Type>> providerClass);
