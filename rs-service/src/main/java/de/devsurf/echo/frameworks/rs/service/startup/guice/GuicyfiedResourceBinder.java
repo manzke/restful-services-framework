@@ -60,6 +60,8 @@ public class GuicyfiedResourceBinder implements ResourceBinder {
 					.to(clazz);
 			if (singleton) {
 				builder.in(Scopes.SINGLETON);
+			} else {
+				builder.in(Scopes.NO_SCOPE);
 			}
 			logger.debug(ToStringMessage.format(GuicyfiedResourceBinder.class)
 					.setParentMessage("Registering resource").addParameter("class", clazz)
