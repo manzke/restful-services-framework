@@ -3,9 +3,6 @@ package de.devsurf.echo.frameworks.rs.service.startup.guice;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import javax.inject.Inject;
-import javax.ws.rs.ApplicationPath;
-
 import org.glassfish.hk2.api.ServiceLocator;
 import org.jvnet.hk2.guice.bridge.api.GuiceBridge;
 import org.jvnet.hk2.guice.bridge.api.GuiceIntoHK2Bridge;
@@ -18,11 +15,9 @@ import com.google.inject.Key;
 import de.devsurf.echo.frameworks.rs.service.startup.Application;
 import de.devsurf.echo.frameworks.rs.service.startup.Configuration;
 
-@ApplicationPath("/")
-public class GuicyfiedApplication extends Application {
+public abstract class GuicyfiedApplication extends Application {
 	protected Injector injector;
 	
-	@Inject
 	public GuicyfiedApplication(ServiceLocator serviceLocator) {
 		super();
 		Injector startupInjector = Guice.createInjector(new Configuration(),
