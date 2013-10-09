@@ -6,4 +6,6 @@ public interface AnnotatedBinder<Type> extends TypedBinder<Type> {
 	TypedBinder<Type> annotatedWith(Class<? extends Annotation> annotationClass);
 	
 	TypedBinder<Type> annotatedWith(Annotation annotation);
+	
+	TypedBinder<Type> named(String name);
 }

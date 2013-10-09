@@ -13,6 +13,7 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.binder.AnnotatedBindingBuilder;
 import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.binder.ScopedBindingBuilder;
+import com.google.inject.name.Names;
 
 import de.devsurf.common.lang.formatter.ExceptionMessage;
 import de.devsurf.common.lang.formatter.ToStringMessage;
@@ -77,6 +78,12 @@ public class GuicyfiedGenericBinder implements GenericBinder {
 		public TypedBinder<Type> annotatedWith(
 				Class<? extends Annotation> annotationClass) {
 			this.annotationClass = annotationClass;
+			return this;
+		}
+		
+		@Override
+		public TypedBinder<Type> named(String name) {
+			this.annotation = Names.named(name);
 			return this;
 		}
 

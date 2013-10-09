@@ -17,7 +17,7 @@ import de.devsurf.echo.frameworks.rs.system.api.ScopedBinder;
 public class GuicyfiedResourceBinder implements ResourceBinder {
 
 	@Log
-	Logger logger;
+	private Logger logger;
 
 	@Override
 	public <Resource extends Publishable> Publisher<Resource> publish(Class<Resource> resourceClass) {
