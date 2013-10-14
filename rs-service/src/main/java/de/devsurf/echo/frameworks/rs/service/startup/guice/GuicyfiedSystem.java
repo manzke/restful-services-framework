@@ -19,7 +19,7 @@ public class GuicyfiedSystem extends AbstractModule {
 		if (logger.isDebugEnabled()) {
 			logger.debug("configure()");
 		}
-		bindListener(Matchers.any(), new LoggerTypeListener());
+		bindListener(Matchers.any(), new GuicyfiedLoggerTypeListener());
 		bind(ResourceBinder.class).to(GuicyfiedResourceBinder.class);
 //		bind(ContextBinder.class).to(GuicyfiedContextBinder.class);
 		bind(GenericBinder.class).to(GuicyfiedGenericBinder.class);

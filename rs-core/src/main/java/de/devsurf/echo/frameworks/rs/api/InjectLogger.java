@@ -5,18 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import org.slf4j.Logger;
+import javax.inject.Qualifier;
 
-/**
- * Enables {@link Logger} injection.
- * 
- *    To enable Logging in a guice managed object define
- *    
- *    @Log Logger logger;
- *
- * @author M.Scheepers
- */
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Log {
+@Qualifier
+public @interface InjectLogger {
+	String value() default "";
 }

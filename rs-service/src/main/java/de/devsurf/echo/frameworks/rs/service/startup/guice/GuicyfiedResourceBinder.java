@@ -8,7 +8,7 @@ import com.google.inject.binder.ScopedBindingBuilder;
 import com.google.inject.name.Names;
 
 import de.devsurf.common.lang.formatter.ToStringMessage;
-import de.devsurf.echo.frameworks.rs.api.Log;
+import de.devsurf.echo.frameworks.rs.api.InjectLogger;
 import de.devsurf.echo.frameworks.rs.api.Publishable;
 import de.devsurf.echo.frameworks.rs.system.api.Framework;
 import de.devsurf.echo.frameworks.rs.system.api.ResourceBinder;
@@ -16,7 +16,7 @@ import de.devsurf.echo.frameworks.rs.system.api.ScopedBinder;
 
 public class GuicyfiedResourceBinder implements ResourceBinder {
 
-	@Log
+	@InjectLogger
 	private Logger logger;
 
 	@Override

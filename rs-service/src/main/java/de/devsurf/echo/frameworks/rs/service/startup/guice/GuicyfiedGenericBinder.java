@@ -17,7 +17,7 @@ import com.google.inject.name.Names;
 
 import de.devsurf.common.lang.formatter.ExceptionMessage;
 import de.devsurf.common.lang.formatter.ToStringMessage;
-import de.devsurf.echo.frameworks.rs.api.Log;
+import de.devsurf.echo.frameworks.rs.api.InjectLogger;
 import de.devsurf.echo.frameworks.rs.system.api.AnnotatedBinder;
 import de.devsurf.echo.frameworks.rs.system.api.Framework;
 import de.devsurf.echo.frameworks.rs.system.api.GenericBinder;
@@ -27,7 +27,7 @@ import de.devsurf.echo.frameworks.rs.system.api.TypedBinder;
 
 public class GuicyfiedGenericBinder implements GenericBinder {
 
-	@Log
+	@InjectLogger
 	private Logger logger;
 
 	@Override

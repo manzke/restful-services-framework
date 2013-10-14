@@ -20,7 +20,7 @@ public interface Publishable {
 	public abstract class AbstractEndpoint implements Publishable, Featured,
 			Versioned {
 		
-		@Log
+		@Logger
 		protected Logger logger;
 		/**
 		 * The UriInfo object of the underlying request. Is injected by the
