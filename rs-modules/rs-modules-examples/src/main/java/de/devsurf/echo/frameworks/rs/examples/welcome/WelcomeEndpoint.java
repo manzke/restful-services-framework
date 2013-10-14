@@ -9,8 +9,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import de.devsurf.echo.frameworks.rs.api.Publishable.AbstractEndpoint;
-import de.devsurf.echo.frameworks.rs.api.User;
-import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager;
+import de.devsurf.echo.frameworks.rs.capabilities.api.CapabilitiesManager;
+import de.devsurf.echo.frameworks.rs.capabilities.api.User;
 
 @Path("welcome")
 public class WelcomeEndpoint extends AbstractEndpoint {

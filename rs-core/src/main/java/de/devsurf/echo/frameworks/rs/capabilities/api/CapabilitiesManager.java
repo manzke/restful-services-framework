@@ -1,7 +1,6 @@
-package de.devsurf.echo.frameworks.rs.system.api;
+package de.devsurf.echo.frameworks.rs.capabilities.api;
 
 import de.devsurf.echo.frameworks.rs.api.Featured;
-import de.devsurf.echo.frameworks.rs.api.User;
 
 
 public interface CapabilitiesManager {

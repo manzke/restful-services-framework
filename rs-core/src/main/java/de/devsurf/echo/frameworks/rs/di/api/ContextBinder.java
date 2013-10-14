@@ -1,4 +1,4 @@
-package de.devsurf.echo.frameworks.rs.system.api;
+package de.devsurf.echo.frameworks.rs.di.api;
 
 public interface ContextBinder extends Installable {
 	ContextBinder bindContext(Class<? extends ContextualObject> contextualTypeClass);

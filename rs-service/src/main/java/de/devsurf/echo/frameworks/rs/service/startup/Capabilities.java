@@ -5,10 +5,10 @@ import org.glassfish.hk2.api.Factory;
 import com.google.common.base.Preconditions;
 
 import de.devsurf.echo.frameworks.rs.api.Featured;
-import de.devsurf.echo.frameworks.rs.api.User;
-import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager;
-import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager.AuthorizationChecker;
-import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager.CapabilitiesEnabler;
+import de.devsurf.echo.frameworks.rs.capabilities.api.CapabilitiesManager;
+import de.devsurf.echo.frameworks.rs.capabilities.api.User;
+import de.devsurf.echo.frameworks.rs.capabilities.api.CapabilitiesManager.AuthorizationChecker;
+import de.devsurf.echo.frameworks.rs.capabilities.api.CapabilitiesManager.CapabilitiesEnabler;
 
 public class Capabilities implements Factory<CapabilitiesManager> {
 	public static class DefaultCapabilitiesManager implements

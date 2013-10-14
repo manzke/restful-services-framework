@@ -1,4 +1,4 @@
-package de.devsurf.echo.frameworks.rs.api.exceptions;
+package de.devsurf.echo.frameworks.rs.exceptions.api;
 
 /**
  * This class can be used to implement an Exception, which is NOT caught and

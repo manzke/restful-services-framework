@@ -1,5 +1,0 @@
-package de.devsurf.echo.frameworks.rs.api;
-
-public interface Group {
-
-}

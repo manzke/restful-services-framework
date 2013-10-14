@@ -8,8 +8,8 @@ import org.glassfish.jersey.server.spi.Container;
 import org.glassfish.jersey.server.spi.ContainerLifecycleListener;
 
 import de.devsurf.echo.frameworks.rs.api.InjectableContext;
+import de.devsurf.echo.frameworks.rs.capabilities.api.CapabilitiesManager;
 import de.devsurf.echo.frameworks.rs.service.resources.ServerEndpoint;
-import de.devsurf.echo.frameworks.rs.system.api.CapabilitiesManager;
 
 public abstract class Application extends ResourceConfig {
 	public Application() {

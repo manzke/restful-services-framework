@@ -10,11 +10,11 @@ import com.google.inject.Injector;
 import com.google.inject.Module;
 import com.google.inject.name.Names;
 
-import de.devsurf.echo.frameworks.rs.api.InstallableModule;
 import de.devsurf.echo.frameworks.rs.api.Publishable;
+import de.devsurf.echo.frameworks.rs.di.api.Framework;
+import de.devsurf.echo.frameworks.rs.di.api.Installable;
+import de.devsurf.echo.frameworks.rs.di.api.InstallableModule;
 import de.devsurf.echo.frameworks.rs.service.internal.VersionEndpoint;
-import de.devsurf.echo.frameworks.rs.system.api.Framework;
-import de.devsurf.echo.frameworks.rs.system.api.Installable;
 
 public class GuicyfiedRuntime extends AbstractModule {
 	@Inject

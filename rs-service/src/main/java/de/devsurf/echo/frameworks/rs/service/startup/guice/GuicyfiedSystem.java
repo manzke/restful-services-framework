@@ -6,9 +6,9 @@ import org.slf4j.LoggerFactory;
 import com.google.inject.AbstractModule;
 import com.google.inject.matcher.Matchers;
 
-import de.devsurf.echo.frameworks.rs.system.api.GenericBinder;
-import de.devsurf.echo.frameworks.rs.system.api.ResourceBinder;
-import de.devsurf.echo.frameworks.rs.system.api.TypeLiteralBuilder;
+import de.devsurf.common.lang.di.TypeLiteralBuilder;
+import de.devsurf.echo.frameworks.rs.di.api.GenericBinder;
+import de.devsurf.echo.frameworks.rs.di.api.ResourceBinder;
 
 public class GuicyfiedSystem extends AbstractModule {
 	

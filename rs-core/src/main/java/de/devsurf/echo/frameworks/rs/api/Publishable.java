@@ -13,6 +13,9 @@ import javax.ws.rs.core.UriInfo;
 
 import org.slf4j.Logger;
 
+import de.devsurf.common.lang.di.InjectLogger;
+import de.devsurf.echo.frameworks.rs.api.Description.DefaultDescription;
+
 public interface Publishable {
 
 	@Produces({ MediaType.APPLICATION_JSON })
@@ -20,7 +23,7 @@ public interface Publishable {
 	public abstract class AbstractEndpoint implements Publishable, Featured,
 			Versioned {
 		
-		@Logger
+		@InjectLogger
 		protected Logger logger;
 		/**
 		 * The UriInfo object of the underlying request. Is injected by the
@@ -76,7 +79,7 @@ public interface Publishable {
 			} else {
 				System.out.println(String.format("No logger found for resource: %s. executing get()", getClass()));
 			}
-			return Response.ok(new Described(id(), version(), description()))
+			return Response.ok(new DefaultDescription(id(), version(), description()))
 					.type(MediaType.APPLICATION_JSON_TYPE).build();
 		}
 	}

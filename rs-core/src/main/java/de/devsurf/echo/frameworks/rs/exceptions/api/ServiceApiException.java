@@ -1,4 +1,4 @@
-package de.devsurf.echo.frameworks.rs.api.exceptions;
+package de.devsurf.echo.frameworks.rs.exceptions.api;
 
 
 /**

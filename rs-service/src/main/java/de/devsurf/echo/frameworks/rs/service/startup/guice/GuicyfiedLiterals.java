@@ -5,7 +5,7 @@ import java.lang.reflect.Type;
 import com.google.inject.util.Types;
 
 import de.devsurf.common.lang.build.Builder;
-import de.devsurf.echo.frameworks.rs.system.api.TypeLiteralBuilder;
+import de.devsurf.common.lang.di.TypeLiteralBuilder;
 
 public class GuicyfiedLiterals implements TypeLiteralBuilder {	
 	@Override

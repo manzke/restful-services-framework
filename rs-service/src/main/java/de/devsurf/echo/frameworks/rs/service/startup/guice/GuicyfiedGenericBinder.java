@@ -15,15 +15,15 @@ import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.binder.ScopedBindingBuilder;
 import com.google.inject.name.Names;
 
+import de.devsurf.common.lang.di.InjectLogger;
 import de.devsurf.common.lang.formatter.ExceptionMessage;
 import de.devsurf.common.lang.formatter.ToStringMessage;
-import de.devsurf.echo.frameworks.rs.api.InjectLogger;
-import de.devsurf.echo.frameworks.rs.system.api.AnnotatedBinder;
-import de.devsurf.echo.frameworks.rs.system.api.Framework;
-import de.devsurf.echo.frameworks.rs.system.api.GenericBinder;
-import de.devsurf.echo.frameworks.rs.system.api.Installable;
-import de.devsurf.echo.frameworks.rs.system.api.ScopedBinder;
-import de.devsurf.echo.frameworks.rs.system.api.TypedBinder;
+import de.devsurf.echo.frameworks.rs.di.api.AnnotatedBinder;
+import de.devsurf.echo.frameworks.rs.di.api.Framework;
+import de.devsurf.echo.frameworks.rs.di.api.GenericBinder;
+import de.devsurf.echo.frameworks.rs.di.api.Installable;
+import de.devsurf.echo.frameworks.rs.di.api.ScopedBinder;
+import de.devsurf.echo.frameworks.rs.di.api.TypedBinder;
 
 public class GuicyfiedGenericBinder implements GenericBinder {
 

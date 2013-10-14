@@ -11,6 +11,8 @@ import com.google.inject.TypeLiteral;
 import com.google.inject.spi.TypeEncounter;
 import com.google.inject.spi.TypeListener;
 
+import de.devsurf.common.lang.di.InjectLogger;
+
 /**
  * Sample was taken from google and modified to be more flexible.
  * http://code.google.com/p/google-guice/wiki/CustomInjections
@@ -22,8 +24,8 @@ public class GuicyfiedLoggerTypeListener implements TypeListener {
 				.getSuperclass()) {
 			for (Field field : c.getDeclaredFields()) {
 				if (field.getType() == Logger.class
-						&& field.isAnnotationPresent(de.devsurf.echo.frameworks.rs.api.InjectLogger.class)) {
-					de.devsurf.echo.frameworks.rs.api.InjectLogger loggerAnnotation = field.getAnnotation(de.devsurf.echo.frameworks.rs.api.InjectLogger.class);
+						&& field.isAnnotationPresent(InjectLogger.class)) {
+					InjectLogger loggerAnnotation = field.getAnnotation(InjectLogger.class);
 					GuicyfiedLoggerInjector<LoggerType> loggerInjector;
 					if(Strings.isNullOrEmpty(loggerAnnotation.value())) {
 						loggerInjector = new GuicyfiedLoggerInjector<>(field);

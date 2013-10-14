@@ -7,12 +7,12 @@ import com.google.inject.Scopes;
 import com.google.inject.binder.ScopedBindingBuilder;
 import com.google.inject.name.Names;
 
+import de.devsurf.common.lang.di.InjectLogger;
 import de.devsurf.common.lang.formatter.ToStringMessage;
-import de.devsurf.echo.frameworks.rs.api.InjectLogger;
 import de.devsurf.echo.frameworks.rs.api.Publishable;
-import de.devsurf.echo.frameworks.rs.system.api.Framework;
-import de.devsurf.echo.frameworks.rs.system.api.ResourceBinder;
-import de.devsurf.echo.frameworks.rs.system.api.ScopedBinder;
+import de.devsurf.echo.frameworks.rs.di.api.Framework;
+import de.devsurf.echo.frameworks.rs.di.api.ResourceBinder;
+import de.devsurf.echo.frameworks.rs.di.api.ScopedBinder;
 
 public class GuicyfiedResourceBinder implements ResourceBinder {
 

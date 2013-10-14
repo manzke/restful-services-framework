@@ -3,11 +3,6 @@ package de.devsurf.echo.frameworks.rs.service.status;
 import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.Response.StatusType;
 
-/**
- * The class CustomStatus.
- *
- * @author sts
- */
 public enum CustomStatus implements StatusType {
 
 	TOO_MANY_REQUESTS(429, "Too Many Requests");
